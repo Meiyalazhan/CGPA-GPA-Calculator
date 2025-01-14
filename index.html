@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA & GPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="margin-bottom: 10px;">CGPA & GPA Calculator</h1>
+
+        <!-- Tab buttons for GPA and CGPA pages -->
+        <div class="tabs">
+            <button class="tab-button" id="gpaTabBtn">GPA Calculator</button>
+            <button class="tab-button" id="cgpaTabBtn">CGPA Calculator</button>
+        </div>
+
+        <!-- GPA Calculator (Initially Hidden) -->
+        <div id="gpaTab" class="tab-content">
+            <h2 style="margin-bottom: 10px;">Subject GPA Calculation</h2>
+            <div id="subjects-section">
+                <div class="subject-row">
+                    <div>
+                        <label>Subject Name:</label>
+                        <input type="text" class="subject-name" placeholder="Enter subject name">
+                    </div>
+                    <div>
+                        <label>Credits:</label>
+                        <input type="number" class="subject-credits" placeholder="Enter subject credits">
+                    </div>
+                    <div>
+                        <label>Grade:</label>
+                        <input type="text" class="subject-grade" placeholder="Enter subject grade">
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="addSubjectBtn">Add Subject</button>
+            <button type="button" id="calculateSubjectGpaBtn">Calculate GPA for Subjects</button>
+            <div id="subjectResult">
+                <h3>Your GPA for Subjects is: <span id="subjectGPA">0.00</span></h3>
+            </div>
+        </div>
+
+        <!-- CGPA Calculator (Initially Hidden) -->
+        <div id="cgpaTab" class="tab-content">
+            <h2>CGPA Calculator</h2>
+            <div class="form-group">
+                <label for="previousCgpa">Previous CGPA:</label>
+                <input type="number" step="0.01" id="previousCgpa" placeholder="Enter your previous CGPA">
+            </div>
+            <div class="form-group">
+                <label for="previousCredits">Previous Credits:</label>
+                <input type="number" id="previousCredits" placeholder="Enter your total credits so far">
+            </div>
+
+            <div class="form-group">
+                <label for="credits">Enter Credits:</label>
+                <input type="number" id="credits" required placeholder="Enter the credits for this semester">
+            </div>
+
+            <div class="form-group">
+                <label for="gpa">Enter GPA:</label>
+                <input type="number" step="0.01" id="gpa" required placeholder="Enter your GPA for this semester">
+            </div>
+
+            <button type="submit" id="calculateBtn">Calculate CGPA</button>
+
+            <div id="result">
+                <h2>Your CGPA is: <span id="calculatedCgpa">0.00</span></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
