@@ -40,7 +40,7 @@ document.getElementById("addSubjectBtn").addEventListener("click", function() {
 
     newSubjectRow.innerHTML = `
         <div>
-            <label>Subject Name:</label>
+            <label>Subject:</label>
             <input type="text" class="subject-name" placeholder="Enter subject name">
         </div>
         <div>
